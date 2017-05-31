@@ -1,0 +1,25 @@
+{
+  "name": "opencart-patches-html-emails",
+  "version": "1.0.0",
+  "description": "HTML Emails",
+  "main": "index.js",
+  "scripts": {
+    "replace": "node ./scripts/replace-php-variables",
+    "mails": "npm run mail:account && npm run mail:forgotten && npm run replace",
+    "mail:account": "mjml ./src/email-templates/account.mjml -o ./src/upload/catalog/view/theme/default/template/mail/account.tpl",
+    "mail:forgotten": "mjml ./src/email-templates/forgotten.mjml -o ./src/upload/catalog/view/theme/default/template/mail/forgotten.tpl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opencart-patches/html-emails.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/opencart-patches/html-emails/issues"
+  },
+  "homepage": "https://github.com/opencart-patches/html-emails#readme",
+  "devDependencies": {
+    "mjml": "^3.3.2"
+  }
+}

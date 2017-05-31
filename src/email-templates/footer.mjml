@@ -1,0 +1,15 @@
+<mj-section background-color="#303030" padding-bottom="20" padding-top="20">
+    <mj-column>
+        <mj-text color="#fff" font-weight="800" padding-bottom="0">[[text_information]]</mj-text>
+        <mj-text color="#fff" padding-bottom="20">[[informations]]</mj-text>
+    </mj-column>
+    <mj-column>
+        <mj-text color="#fff" font-weight="800">[[text_service]]</mj-text>
+        <mj-text padding-top="0" padding-bottom="0" color="#fff"><a style="color:white;" href="[[contact]]">[[text_contact]]</a></mj-text>
+        <mj-text padding-top="0" padding-bottom="0" color="#fff"><a style="color:white;" href="[[return]]">[[text_return]]</a></mj-text>
+        <mj-text padding-top="0" padding-bottom="20" color="#fff"><a style="color:white;" href="[[sitemap]]">[[text_sitemap]]</a></mj-text>
+    </mj-column>
+    <mj-column>
+        <mj-text color="#fff">[[address]]</mj-text>
+    </mj-column>
+</mj-section>

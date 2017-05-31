@@ -1,0 +1,6 @@
+<mj-section background-color="#fff" padding-bottom="20" padding-top="20">
+    <mj-column vertical-align="top" width="100%">
+        <mj-image src="[[logo]]" alt="[[store_name]]" align="center" border="none" width="150" vertical-align="middle" padding-left="0" padding-right="0" padding-bottom="10" padding-top="10">
+        </mj-image>
+    </mj-column>
+</mj-section>

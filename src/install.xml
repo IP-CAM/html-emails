@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>opencart-patches-html-emails</name>
+    <version>1.0.0</version>
+    <author>opencart-patches</author>
+    <link>https://github.com/opencart-patches</link>
+    <code>opencart-patches-html-emails</code>
+
+    <file path="catalog/model/account/customer.php">
+        <operation>
+            <search><![CDATA[$this->load->language('mail/customer');]]></search>
+            <add position="before"><![CDATA[/*]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[return $customer_id;]]></search>
+            <add position="before"><![CDATA[*/]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/account/forgotten.php">
+        <operation>
+            <search><![CDATA[$subject]]></search>
+            <add position="before"><![CDATA[/*]]></add>
+        </operation>
+        <operation>
+            <search><![CDATA[$mail->send();]]></search>
+            <add position="after"><![CDATA[*/]]></add>
+        </operation>
+    </file>
+
+    <file path="catalog/model/checkout/order.php">
+        <operation>
+            <search><![CDATA[if (!$order_info['order_status_id'] && $order_status_id) {]]></search>
+            <add position="before"><![CDATA[/*]]></add>
+        </operation>
+        <operation>
+            <search index="3"><![CDATA[$mail->send();]]></search>
+            <add position="after" offset="1"><![CDATA[*/]]></add>
+        </operation>
+    </file>
+
+</modification>

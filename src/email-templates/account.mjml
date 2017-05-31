@@ -1,0 +1,25 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-all font-family="Arial" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-container background-color="#eeeeee">
+      <mj-include path="./header" />  
+      <mj-section background-color="#fff" padding-bottom="20" padding-top="20">
+        <mj-column vertical-align="middle">
+          <mj-text font-weight="800">[[welcome]]</mj-text>
+          <mj-spacer height="20px" />
+          <mj-text padding-top="0" padding-bottom="0">[[text]]</mj-text>
+          <mj-text padding-top="0" padding-bottom="0"><a href="[[link]]">[[link]]</a></mj-text>
+          <mj-spacer height="20px" />
+          <mj-text padding-top="0" padding-bottom="0">[[services]]</mj-text>
+          <mj-spacer height="20px" />
+          <mj-text>[[thanks]]</mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-include path="./footer" />
+    </mj-container>
+  </mj-body>
+</mjml>

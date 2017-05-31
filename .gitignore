@@ -1,0 +1,10 @@
+/vendor
+/node_modules
+/target
+/bin
+/www
+/.idea
+/.vscode
+.env
+*~
+composer.lock
