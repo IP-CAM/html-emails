@@ -24,8 +24,18 @@
         "src-dir" : "src/upload" ,
         "opencart-dir" : "www" ,
         "installers" : {
-            "xml" : "src/install.xml"
-        }
+            "xml" : "src/install.xml" ,
+            "php" : "src/install.php"
+        },
+        "mappings" : [
+            "catalog/controller/event/mail.php" ,
+            "catalog/model/mail/account.php" ,
+            "catalog/model/mail/forgotten.php" ,
+            "catalog/model/mail/order.php" ,
+            "catalog/view/theme/default/template/mail/account.tpl" ,
+            "catalog/view/theme/default/template/mail/forgotten.tpl" ,
+            "system/library/mailtemplate.php"
+        ]
     },
     "require": {
         "beyondit/opencart-extension-installer": "^2.3"
