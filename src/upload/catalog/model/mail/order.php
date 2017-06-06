@@ -297,6 +297,8 @@ class ModelMailOrder extends MailTemplate {
 
             $text .= $language->get('text_new_footer') . "\n\n";
 
+            $this->attachHeader($data);
+            $this->attachFooter($data);
             $this->sendMail(
                 $order_info['email'] ,
                 html_entity_decode($subject, ENT_QUOTES, 'UTF-8') ,
