@@ -21,7 +21,7 @@ class ControllerEventMail extends Controller {
      */
     public function forgotten(&$route, &$data) {
         $this->load->model('mail/forgotten');
-		$this->model_mail_account->triggerMail($route, $data);
+		$this->model_mail_forgotten->triggerMail($route, $data);
     }
 
     /**
