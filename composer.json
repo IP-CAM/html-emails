@@ -38,6 +38,6 @@
         ]
     },
     "require": {
-        "beyondit/opencart-extension-installer": "^2.3"
+        "beyondit/opencart-extension-installer": "^2.3.1"
     }
 }
