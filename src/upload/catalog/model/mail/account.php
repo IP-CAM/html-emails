@@ -2,7 +2,7 @@
 
 class ModelMailAccount extends MailTemplate {
 
-    public function triggerMail(&$route, &$data = null, &$result = null) {
+    public function triggerMail($route, $data = null, $result = null) {
         $this->load->model('account/customer');
 		$this->load->model('account/customer_group');
         $customer = $this->model_account_customer->getCustomer($result);

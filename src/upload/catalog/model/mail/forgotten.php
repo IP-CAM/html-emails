@@ -2,7 +2,7 @@
 
 class ModelMailForgotten extends MailTemplate {
 
-    public function triggerMail(&$route, &$data = null, &$result = null) {
+    public function triggerMail($route, $data = null, $result = null) {
         $this->load->language('mail/forgotten');
         $subject = sprintf($this->language->get('text_subject'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
 

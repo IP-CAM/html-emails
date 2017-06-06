@@ -2,7 +2,7 @@
 
 abstract class MailTemplate extends Model {
 
-    abstract public function triggerMail(&$route, &$data = null, &$result = null);
+    abstract public function triggerMail($route, $data = null, $result = null);
 
     public function sendMail($to, $subject, $text, $html = null) {
         $mail = new Mail();

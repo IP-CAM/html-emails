@@ -2,7 +2,7 @@
 
 class ModelMailOrder extends MailTemplate {
 
-    public function triggerMail(&$route, &$data = null, &$result = null) {
+    public function triggerMail($route, $data = null, $result = null) {
         $order_id = $data[0];
         $order_status_id = $data[1];
         $comment = $data[3];
