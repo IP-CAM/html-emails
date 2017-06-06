@@ -54,6 +54,7 @@ abstract class MailTemplate extends Model {
     }
 
     public function attachFooter(&$data) {
+        $this->load->model('catalog/information');
         $this->load->language('common/footer');
 
         $data['text_information'] = $this->language->get('text_information');
