@@ -1,12 +1,14 @@
 <?php
 
-$this->event->removeEvent('mail-customer-add');
-$this->event->addEvent('mail-customer-add', 'catalog/model/account/customer/addCustomer/after', 'event/mail/addCustomer');
+$this->load->model('extension/event');
 
-$this->event->removeEvent('mail-forgotton');
-$this->event->addEvent('mail-forgotton', 'catalog/model/account/customer/editCode/after', 'event/mail/forgotten');
+$this->model_extension_event->deleteEvent('mail-customer-add');
+$this->model_extension_event->addEvent('mail-customer-add', 'catalog/model/account/customer/addCustomer/after', 'event/mail/addCustomer');
 
-$this->event->removeEvent('mail-order-before');
-$this->event->addEvent('mail-order-before', 'catalog/model/checkout/order/addOrderHistory/before', 'event/mail/orderBefore');
-$this->event->removeEvent('mail-order-after');
-$this->event->addEvent('mail-order-after', 'catalog/model/checkout/order/addOrderHistory/after', 'event/mail/orderAfter');
+$this->model_extension_event->deleteEvent('mail-forgotton');
+$this->model_extension_event->addEvent('mail-forgotton', 'catalog/model/account/customer/editCode/after', 'event/mail/forgotten');
+
+$this->model_extension_event->deleteEvent('mail-order-before');
+$this->model_extension_event->addEvent('mail-order-before', 'catalog/model/checkout/order/addOrderHistory/before', 'event/mail/orderBefore');
+$this->model_extension_event->deleteEvent('mail-order-after');
+$this->model_extension_event->addEvent('mail-order-after', 'catalog/model/checkout/order/addOrderHistory/after', 'event/mail/orderAfter');
