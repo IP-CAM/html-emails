@@ -23,8 +23,9 @@
     "extra": {
         "src-dir" : "src/upload" ,
         "opencart-dir" : "www" ,
-        "mappings" : [            
-        ]
+        "installers" : {
+            "xml" : "src/install.xml"
+        }
     },
     "require": {
         "beyondit/opencart-extension-installer": "^2.3"
