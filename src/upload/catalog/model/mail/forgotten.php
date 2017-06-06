@@ -3,6 +3,17 @@
 class ModelMailForgotten extends MailTemplate {
 
     public function triggerMail($route, $data = null, $result = null) {
+        if ($this->request->post && isset($this->request->post['email'])) {
+            $customer_info = $this->model_account_customer->getCustomerByEmail($this->request->post['email']);
+            if ($customer_info) {
+                $code = $customer_info['code'];
+            }
+        }
+
+        if (!isset($code)) {
+            return;
+        }
+
         $this->load->language('mail/forgotten');
         $subject = sprintf($this->language->get('text_subject'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
 
