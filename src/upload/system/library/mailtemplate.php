@@ -71,10 +71,13 @@ abstract class MailTemplate extends Model {
 			}
 		}
 
-		$data['contact'] = $this->url->link('information/contact');
-		$data['return'] = $this->url->link('account/return/add', '', true);
-		$data['sitemap'] = $this->url->link('information/sitemap');
-        $data['address'] = nl2br($this->config->get('config_address'));
+		$data['contact']   = $this->url->link('information/contact');
+		$data['return']    = $this->url->link('account/return/add', '', true);
+		$data['sitemap']   = $this->url->link('information/sitemap');
+
+        $data['address']   = nl2br($this->config->get('config_address'));
+        $data['telephone'] = $this->config->get('config_telephone');
+        $data['email']     = $this->config->get('config_fax');
     }
 
 }
