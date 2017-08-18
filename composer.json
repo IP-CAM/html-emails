@@ -22,7 +22,6 @@
     },
     "extra": {
         "src-dir" : "src/upload" ,
-        "opencart-dir" : "www" ,
         "installers" : {
             "xml" : "src/install.xml" ,
             "php" : "src/install.php"
